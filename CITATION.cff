@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this shiny app, please cite it as below."
+authors:
+- family-names: Zahroh
+  given-names: Solichatus
+orcid: https://orcid.org/0009-0009-7911-0256
+title:solichatuszhrh/shinyapp: First release shiny app
+version: v0.1.0
+date-released: 2024-01-13
