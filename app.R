@@ -25,7 +25,7 @@ geodata <- read_sf("https://raw.githubusercontent.com/eurostat/Nuts2json/master/
 # Merge with attribute data with geodata
 maps <- inner_join(geodata, data, by="id")
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a map and trend line chart
 ui <- fluidPage(
 
     # Application title
@@ -34,9 +34,7 @@ ui <- fluidPage(
     # Select input for the chosen country and year
     sidebarLayout(
         sidebarPanel(
-            numericInput("TIME_PERIOD",
-                      "Year",
-                      value=2010),
+            selectInput("TIME_PERIOD", "Year", choices = c(1990:2021)),
             selectInput("id",
                         "Country",
                         choices = list(
